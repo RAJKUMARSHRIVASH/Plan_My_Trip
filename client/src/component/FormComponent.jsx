@@ -17,8 +17,8 @@ import { Select } from '@chakra-ui/react'
 
 export default function FormComponent() {
 
-  const baseURL = "https://planmytrip-q0gy.onrender.com"
-  // const baseURL = "http://localhost:8000"
+  // const baseURL = "https://planmytrip-q0gy.onrender.com"
+  const baseURL = "http://localhost:8000"
 
 
   // const [name,setName] = useState("");
@@ -52,7 +52,7 @@ export default function FormComponent() {
     const data = await fetctedData.json();
     if (data === "New Trip Posted") {
       alert(data);
-      // window.location.href = "gettrip"
+      // window.location.href = `${baseURL}/gettrip`
     }
     else {
       alert(data);
