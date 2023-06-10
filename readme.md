@@ -1,1 +1,1 @@
-# Full stack React app
+# Plan My trip
