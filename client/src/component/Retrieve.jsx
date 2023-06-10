@@ -100,6 +100,19 @@ export default function Retrieve() {
                             </List>
 
                             <Button
+                            onClick={(async()=>{
+                                const data = await fetch(`${baseURL}/api/trip/${el._id}`,{
+                                    method:"DELETE",
+                                    headers:{
+                                        "Content-Type":"application/json"
+                                    }
+                                });
+                                const res = await data.json();
+                                console.log(res)
+                                alert(res)
+                                getData()
+
+                            })}
                                 mt={10}
                                 w={'full'}
                                 bg={'green.400'}
@@ -107,12 +120,12 @@ export default function Retrieve() {
                                 rounded={'xl'}
                                 boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
                                 _hover={{
-                                    bg: 'green.500',
+                                    bg: 'red.500',
                                 }}
                                 _focus={{
                                     bg: 'green.500',
                                 }}>
-                                Book Your trip
+                                Delete Your trip
                             </Button>
                         </Box>
                     </Box>)

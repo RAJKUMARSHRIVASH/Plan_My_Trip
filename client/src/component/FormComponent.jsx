@@ -17,8 +17,8 @@ import { Select } from '@chakra-ui/react'
 
 export default function FormComponent() {
 
-  // const baseURL = "https://planmytrip-q0gy.onrender.com"
-  const baseURL = "http://localhost:8000"
+  const baseURL = "https://planmytrip-q0gy.onrender.com"
+  // const baseURL = "http://localhost:8000"
 
 
   // const [name,setName] = useState("");
