@@ -33,7 +33,6 @@ export default function Retrieve() {
         const dest = document.getElementById("destination").value || "";
         const fetctedData = await fetch(`${baseURL}/api/trip/gettrip/${dest}`)
         const data = await fetctedData.json();
-        console.log(data)
         setArr(data)
 
     }

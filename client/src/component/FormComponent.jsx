@@ -52,7 +52,7 @@ export default function FormComponent() {
     const data = await fetctedData.json();
     if (data === "New Trip Posted") {
       alert(data);
-      window.location.href = "/gettrip"
+      window.location.href = "gettrip"
     }
     else {
       alert(data);
