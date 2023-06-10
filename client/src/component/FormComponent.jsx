@@ -41,19 +41,22 @@ export default function FormComponent() {
       no_of_travellers,
       budget_per_person
     }
-    // console.log(payload)
 
-    const fetctedData = await fetch(`${baseURL}/maketrip`, {
+    const fetctedData = await fetch(`${baseURL}/api/trip/maketrip`, {
       method: "POST",
-      header: {
+      headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(payload)
     });
     const data = await fetctedData.json();
-    console.log(data)
-    if(data){
-      alert(data)
+    if (data === "New Trip Posted") {
+      alert(data);
+      window.location.href = "/gettrip"
+    }
+    else {
+      alert(data);
+
     }
 
   }
