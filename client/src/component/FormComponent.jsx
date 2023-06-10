@@ -68,6 +68,7 @@ export default function FormComponent() {
                 <FormControl id="destination">
                   <FormLabel>Destination</FormLabel>
                   <Select>
+                    <option value=''>select </option>
                     <option value='India'>India</option>
                     <option value='Africa'>Africa</option>
                     <option value='Europe'>Europe</option>
@@ -80,20 +81,13 @@ export default function FormComponent() {
               <FormLabel>Email address</FormLabel>
               <Input type="email" />
             </FormControl>
-            <FormControl id="password" isRequired>
-              <FormLabel>Password</FormLabel>
-              <InputGroup>
-                <Input type={showPassword ? 'text' : 'password'} />
-                <InputRightElement h={'full'}>
-                  <Button
-                    variant={'ghost'}
-                    onClick={() =>
-                      setShowPassword((showPassword) => !showPassword)
-                    }>
-                    {showPassword ? <ViewIcon /> : <ViewOffIcon />}
-                  </Button>
-                </InputRightElement>
-              </InputGroup>
+            <FormControl id="no_of_traveler" isRequired>
+              <FormLabel>No. of Travellers</FormLabel>
+              <Input type='Number'></Input>
+            </FormControl>
+            <FormControl id="budget_per_person" isRequired>
+              <FormLabel>Budget/Person</FormLabel>
+              <Input type='Number'></Input>
             </FormControl>
             <Stack spacing={10} pt={2}>
               <Button
@@ -104,7 +98,7 @@ export default function FormComponent() {
                 _hover={{
                   bg: 'blue.500',
                 }}>
-                Sign up
+                Post Trip
               </Button>
             </Stack>
           </Stack>
