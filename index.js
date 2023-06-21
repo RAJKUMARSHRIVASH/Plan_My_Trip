@@ -9,10 +9,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use("/api/trip", postRouter);
-
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 app.get("/", (req, res) => {
-    app.use(express.static(path.join(__dirname, "client", "build")))
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
 
